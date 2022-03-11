@@ -1,0 +1,35 @@
+@import "../colors";
+
+.container {
+    padding: 1rem 4rem;
+    background-color: $primary_blue;
+    margin-top: 1.2rem;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+
+    transition: ease 0.5s;
+
+    &:hover {
+        padding-right: 24px;
+  padding-left:8px;
+    }
+
+    &:after {
+        content: '»';   
+        position: absolute;
+        opacity: 0;  
+        top: 14px;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    &:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+
+}

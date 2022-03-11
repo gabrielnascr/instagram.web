@@ -1,0 +1,41 @@
+@import '../colors';
+
+.container {
+    position: relative;
+    width: 100%;
+
+    > label {
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        transition: all 0.2s ease-in;
+        color: rgb(93, 93, 93);
+            padding: 0 0.4rem;
+    }
+
+     > input {
+        border: 2px solid rgb(197, 197, 197);
+        border-radius: 6px;
+        padding: 1rem 1.25rem;
+        width: 100%;
+        background: none;
+        color: $grey;
+        outline: none;
+        cursor: text;
+        transition: ease-in 0.3s;
+        
+        &:focus  {
+            border-color: $primary_blue;
+        }
+
+        &:focus ~ label,
+        &:not(:placeholder-shown) ~ label {
+            top: -0.5rem;
+            font-size: 0.8rem;
+            left: 0.8rem;
+            background: white;
+
+        }
+    }
+
+}
